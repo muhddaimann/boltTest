@@ -42,11 +42,11 @@ export default function SearchScreen() {
           numColumns={2}
           contentContainerStyle={styles.results}
           ListEmptyComponent={
-            !loading && (
+            !loading ? (
               <Text style={styles.empty}>
                 {query ? 'No movies found' : 'Start searching for movies'}
               </Text>
-            )
+            ) : null
           }
         />
       )}
