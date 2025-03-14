@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Link } from 'expo-router';
 import { LogIn } from 'lucide-react-native';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 export default function LandingScreen() {
   return (
@@ -21,43 +22,11 @@ export default function LandingScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  content: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-  },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    marginBottom: 10,
-    textAlign: 'center',
-  },
-  subtitle: {
-    fontSize: 18,
-    color: '#666',
-    textAlign: 'center',
-    marginBottom: 40,
-  },
-  button: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#007AFF',
-    paddingVertical: 15,
-    paddingHorizontal: 30,
-    borderRadius: 10,
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 18,
-    fontWeight: '600',
-    marginLeft: 10,
-  },
-  icon: {
-    marginRight: 8,
-  },
+  container: { flex: 1, backgroundColor: '#fff' },
+  content: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: wp('5%') },
+  title: { fontSize: wp('8%'), fontWeight: 'bold', marginBottom: hp('1.5%'), textAlign: 'center' },
+  subtitle: { fontSize: wp('4.5%'), color: '#666', textAlign: 'center', marginBottom: hp('5%') },
+  button: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#007AFF', paddingVertical: hp('2%'), paddingHorizontal: wp('7%'), borderRadius: wp('3%') },
+  buttonText: { color: '#fff', fontSize: wp('4.5%'), fontWeight: '600', marginLeft: wp('2%') },
+  icon: { marginRight: wp('2%') },
 });

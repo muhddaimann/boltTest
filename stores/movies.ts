@@ -4,7 +4,7 @@ import axios from 'axios';
 const TMDB_ACCESS_TOKEN = process.env.EXPO_PUBLIC_TMDB_ACCESS_TOKEN;
 const BASE_URL = 'https://api.themoviedb.org/3';
 
-interface Movie {
+export interface Movie {
   id: number;
   title: string;
   overview: string;
@@ -14,7 +14,7 @@ interface Movie {
   release_date: string;
 }
 
-interface MoviesState {
+export interface MoviesState {
   trending: Movie[];
   searchResults: Movie[];
   selectedMovie: Movie | null;

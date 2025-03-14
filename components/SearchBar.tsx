@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, TextInput, StyleSheet, Platform } from 'react-native';
 import { Search } from 'lucide-react-native';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 interface SearchBarProps {
   value: string;
@@ -28,27 +29,15 @@ export default function SearchBar({
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#f5f5f5',
-    borderRadius: 12,
-    paddingHorizontal: 16,
-    paddingVertical: Platform.OS === 'ios' ? 12 : 8,
-    marginHorizontal: 16,
-    marginVertical: 8,
+  container: { 
+    flexDirection: 'row', alignItems: 'center', backgroundColor: '#f5f5f5', 
+    borderRadius: wp('3%'), paddingHorizontal: wp('4%'), 
+    paddingVertical: Platform.OS === 'ios' ? hp('1.5%') : hp('1%'), 
+    marginHorizontal: wp('4%'), marginVertical: hp('1%') 
   },
-  icon: {
-    marginRight: 8,
-  },
-  input: {
-    flex: 1,
-    fontSize: 16,
-    color: '#1a1a1a',
-    ...Platform.select({
-      web: {
-        outline: 'none',
-      },
-    }),
+  icon: { marginRight: wp('2%') },
+  input: { 
+    flex: 1, fontSize: wp('4%'), color: '#1a1a1a', 
+    ...Platform.select({ web: { outline: 'none' } }) 
   },
 });

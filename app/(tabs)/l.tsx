@@ -3,6 +3,7 @@ import { View, Text, FlatList, StyleSheet } from 'react-native';
 import { useMoviesStore } from '@/stores/movies';
 import SearchBar from '@/components/SearchBar';
 import MovieCard from '@/components/MovieCard';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 export default function SearchScreen() {
   const [query, setQuery] = useState('');
@@ -55,25 +56,9 @@ export default function SearchScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  results: {
-    padding: 8,
-  },
-  movieCard: {
-    flex: 1,
-    padding: 8,
-  },
-  error: {
-    padding: 16,
-    color: 'red',
-    textAlign: 'center',
-  },
-  empty: {
-    padding: 16,
-    textAlign: 'center',
-    color: '#666',
-  },
+  container: { flex: 1, backgroundColor: '#fff' },
+  results: { padding: wp('2%') },
+  movieCard: { flex: 1, padding: wp('2%') },
+  error: { padding: hp('2%'), color: 'red', textAlign: 'center' },
+  empty: { padding: hp('2%'), textAlign: 'center', color: '#666' },
 });

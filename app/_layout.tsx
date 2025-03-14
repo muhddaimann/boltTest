@@ -1,4 +1,4 @@
-import { Stack } from 'expo-router';
+import { Slot } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 
@@ -7,17 +7,7 @@ export default function RootLayout() {
 
   return (
     <>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen 
-          name="movie/[id]" 
-          options={{
-            headerTransparent: true,
-            headerTitle: '',
-            headerBackTitle: 'Back',
-          }} 
-        />
-      </Stack>
+      <Slot />
       <StatusBar style="auto" />
     </>
   );

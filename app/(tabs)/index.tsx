@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { View, Text, ScrollView, StyleSheet, RefreshControl } from 'react-native';
 import { useMoviesStore } from '@/stores/movies';
 import MovieCard from '@/components/MovieCard';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
+
 
 export default function DiscoverScreen() {
   const { trending, loading, error, fetchTrending } = useMoviesStore();
@@ -45,29 +47,10 @@ export default function DiscoverScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  header: {
-    padding: 16,
-  },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#1a1a1a',
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#666',
-    marginTop: 4,
-  },
-  movieList: {
-    padding: 16,
-  },
-  error: {
-    padding: 16,
-    color: 'red',
-    textAlign: 'center',
-  },
+  container: { flex: 1, backgroundColor: '#fff' },
+  header: { padding: hp("2%") },
+  title: { fontSize: hp("4%"), fontWeight: 'bold', color: '#1a1a1a' },
+  subtitle: { fontSize: hp("2%"), color: '#666', marginTop: hp("0.5%") },
+  movieList: { padding: hp("2%") },
+  error: { padding: hp("2%"), color: 'red', textAlign: 'center' },
 });

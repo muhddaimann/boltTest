@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 import { router } from 'expo-router';
 import { useAuthStore } from '@/stores/auth';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 export default function LoginScreen() {
   const [username, setUsername] = useState('');
@@ -49,39 +50,10 @@ export default function LoginScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-    justifyContent: 'center',
-    backgroundColor: '#fff',
-  },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    marginBottom: 30,
-    textAlign: 'center',
-  },
-  input: {
-    backgroundColor: '#f5f5f5',
-    padding: 15,
-    borderRadius: 10,
-    marginBottom: 15,
-    fontSize: 16,
-  },
-  button: {
-    backgroundColor: '#007AFF',
-    padding: 15,
-    borderRadius: 10,
-    alignItems: 'center',
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 18,
-    fontWeight: '600',
-  },
-  error: {
-    color: 'red',
-    marginBottom: 15,
-    textAlign: 'center',
-  },
+  container: { flex: 1, padding: wp('5%'), justifyContent: 'center', backgroundColor: '#fff' },
+  title: { fontSize: wp('8%'), fontWeight: 'bold', marginBottom: hp('4%'), textAlign: 'center' },
+  input: { backgroundColor: '#f5f5f5', padding: hp('2%'), borderRadius: wp('3%'), marginBottom: hp('2%'), fontSize: wp('4%') },
+  button: { backgroundColor: '#007AFF', padding: hp('2%'), borderRadius: wp('3%'), alignItems: 'center' },
+  buttonText: { color: '#fff', fontSize: wp('4.5%'), fontWeight: '600' },
+  error: { color: 'red', marginBottom: hp('2%'), textAlign: 'center' },
 });

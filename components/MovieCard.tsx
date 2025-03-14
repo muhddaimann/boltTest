@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, Platform } from 'react-native';
 import { Link } from 'expo-router';
 import { Star } from 'lucide-react-native';
+import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 interface MovieCardProps {
   id: number;
@@ -41,56 +42,17 @@ export default function MovieCard({ id, title, posterPath, rating, date }: Movie
 }
 
 const styles = StyleSheet.create({
-  container: {
-    width: 160,
-    marginRight: 16,
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    ...Platform.select({
-      web: {
-        cursor: 'pointer',
-      },
-    }),
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 8,
-    elevation: 3,
+  container: { 
+    width: wp('40%'), marginRight: wp('4%'), backgroundColor: '#fff', borderRadius: wp('3%'), 
+    shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.1, shadowRadius: wp('2%'), 
+    elevation: 3, 
+    ...Platform.select({ web: { cursor: 'pointer' } }) 
   },
-  poster: {
-    width: '100%',
-    height: 240,
-    borderTopLeftRadius: 12,
-    borderTopRightRadius: 12,
-  },
-  info: {
-    padding: 12,
-  },
-  title: {
-    fontSize: 16,
-    fontWeight: '600',
-    marginBottom: 8,
-    color: '#1a1a1a',
-  },
-  details: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  rating: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  ratingText: {
-    marginLeft: 4,
-    fontSize: 14,
-    color: '#666',
-  },
-  year: {
-    fontSize: 14,
-    color: '#666',
-  },
+  poster: { width: '100%', height: hp('30%'), borderTopLeftRadius: wp('3%'), borderTopRightRadius: wp('3%') },
+  info: { padding: wp('3%') },
+  title: { fontSize: wp('4%'), fontWeight: '600', marginBottom: hp('1%'), color: '#1a1a1a' },
+  details: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  rating: { flexDirection: 'row', alignItems: 'center' },
+  ratingText: { marginLeft: wp('1%'), fontSize: wp('3.5%'), color: '#666' },
+  year: { fontSize: wp('3.5%'), color: '#666' },
 });
