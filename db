@@ -1,0 +1,46 @@
+boltTest/
+├─ app/
+│  ├─ _layout.tsx
+│  ├─ (tabs)/
+│  │  ├─ _layout.tsx
+│  │  ├─ index.tsx
+│  │  ├─ j.tsx
+│  │  ├─ k.tsx
+│  │  └─ l.tsx
+│  ├─ index.tsx
+│  ├─ movie/
+│  │  └─ [id].tsx
+│  └─ login.tsx
+├─ assets/
+│  └─ images/
+│     ├─ favicon.png
+│     └─ icon.png
+├─ components/
+│  ├─ movieCard.tsx
+│  └─ searchBar.tsx
+├─ constants/
+│  ├─ color.ts
+│  ├─ shade.ts
+│  └─ theme.ts
+├─ contexts/
+│  ├─ api/
+│  │  ├─ api.tsx
+│  │  ├─ auth.tsx
+│  │  └─ movies.tsx
+│  ├─ authContext.tsx
+│  ├─ modeContext.tsx
+│  └─ tokenContext.tsx
+├─ hooks/
+│  └─ useFrameworkReady.ts
+├─ types/
+│  └─ env.d.ts
+├─ .env
+├─ .gitignore
+├─ .prettierrc
+├─ app.json
+├─ db
+├─ expo-env.d.ts
+├─ package-lock.json
+├─ package.json
+├─ README.md
+└─ tsconfig.json

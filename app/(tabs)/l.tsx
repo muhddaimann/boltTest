@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-import { useMoviesStore } from '@/stores/movies';
-import SearchBar from '@/components/SearchBar';
-import MovieCard from '@/components/MovieCard';
+import { useMoviesStore } from '@/contexts/api/movie';
+import SearchBar from '@/components/searchBar';
+import MovieCard from '@/components/movieCard';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 export default function SearchScreen() {

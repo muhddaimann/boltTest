@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from 'react-native';
-import { useAuthStore } from '@/stores/auth';
+import { useAuthStore } from '@/contexts/api/auth';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 export default function HomeScreen() {

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { View, Text, ScrollView, StyleSheet, RefreshControl } from 'react-native';
-import { useMoviesStore } from '@/stores/movies';
-import MovieCard from '@/components/MovieCard';
+import { useMoviesStore } from '@/contexts/api/movie';
+import MovieCard from '@/components/movieCard';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
 
 

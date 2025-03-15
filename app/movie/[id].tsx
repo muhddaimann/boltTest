@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { View, Text, Image, ScrollView, StyleSheet, Dimensions } from 'react-native';
 import { useLocalSearchParams } from 'expo-router';
-import { useMoviesStore } from '@/stores/movies';
+import { useMoviesStore } from '@/contexts/api/movie';
 import { Star, Calendar } from 'lucide-react-native';
 
 const { width } = Dimensions.get('window');
